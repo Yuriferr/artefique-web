@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.3fr;
+    height: 100%;
+    width: 100%;
+}
+
+.full_size {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+}
+
+.login_header {
+    position: absolute;
+    display: flex !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    justify-content: flex-start !important;
+    align-items: center;
+}
+
+.login_header img {
+    width: 10%;
+    margin-left: 30px;
+}
+
+.back {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    border: 0;
+    background-color: transparent;
+    background-image: url('../../assets/buttons/de-volta.png');
+    background-size: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+/* Background */
+
+body {
+    background-color: #f9f9f9;
+    background-size: 100%;
+}
+
+.side_element {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* background-color: aqua; */
+}
+
+.background_img {
+    width: 80%;
+    object-fit: contain;
+}
+
+/* Login */
+
+.login_screen {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    /* background-color: red; */
+}
+
+.login_block {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 600px;
+    height: 700px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+/* Titulo */
+
+.title {
+    margin-left: 56px;
+    margin-top: 35px;
+    font-size: 25px;
+}
+
+.title span {
+    font-weight: 800;
+    font-size: 40px;
+
+    /* Gradient */
+    background-size: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #FB2E78 40%, #F24E44 60%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.underline {
+    margin-left: 56px;
+    width: 200px;
+    height: 2.5px;
+    border-radius: 20px;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #FB2E78 40%, #F24E44 60%);
+}
+
+/* Inputs */
+
+.section_input {
+    margin-top: 30px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insert_input {
+    width: 75%;
+    height: 30px;
+    border: 0;
+    border-bottom: solid 1.5px #000000;
+    padding-right: 10px;
+}
+
+.insert_input:focus {
+    outline: none;
+    border-color: #FB2E78;
+
+}
+
+#email {
+    background: url("../../assets/input_icons/mail.png") no-repeat scroll 7px 7px;
+    background-size: 20px;
+    background-position: 5px;
+    padding-left: 30px;
+}
+
+#password {
+    background: url("../../assets/input_icons/password.png") no-repeat scroll 7px 7px;
+    background-size: 20px;
+    background-position: 5px;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+
+/* Preferências */
+
+.preferences {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: #e0e0e0;
+    /* Not removed via appearance */
+    margin: 0;
+
+    font: inherit;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    /* border: 0.15em solid currentColor; */
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: #FB2E78;
+    background-image: linear-gradient(180deg, #FB2E78 40%, #F24E44 60%);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+    /* outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em); */
+}
+
+input[type="checkbox"]:disabled {
+    --form-control-color: var(--form-control-disabled);
+
+    color: var(--form-control-disabled);
+    cursor: not-allowed;
+}
+
+.forgot_text {
+    color: #FB2E78;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.enter {
+    width: 80%;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, #FB2E78 0%, #F27A52 100%);
+    transition: 0.2s;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+
+    margin-top: 30px;
+}
+
+.enter:hover {
+    transition: ease-in-out, transform .25s ease-in-out;
+    transform: scale(90%);
+    cursor: pointer;
+}
+
+.enter:active {
+    transition: ease-in-out, transform .05s ease-in-out;
+    transform: scale(100%);
+    background: linear-gradient(90deg, #db2769 0%, #d36b48 100%);
+}
+
+.link {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #FB2E78;
+}
+
+.buttons span {
+    color: #000000;
+}
+
+/* more */
+.or {
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.underline_black {
+    width: 38%;
+    height: 1px;
+    border-radius: 20px;
+    background-color: #a8a8a8;
+    margin: 15px;
+}
+
+.options {
+    color: #a8a8a8;
+}
+
+.external_buttons {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_logo {
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    transition: 0.25s;
+}
+
+.button_logo:hover {
+    transition: ease-in-out, transform .25s ease-in-out;
+    transform: scale(90%);
+    cursor: pointer;
+}
+
+.button_logo:active {
+    transition: ease-in-out, transform .05s ease-in-out;
+    transform: scale(100%);
+
+}
+
+.morelogin_logo {
+    width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+    .background_img{
+        display: none;
+    }
+}
+
+
+
+/* Waves */
+/* 
+.wrapper{
+    position: absolute;
+    bottom: 0px;
+    z-index: -10;
+    width: 100%;
+    height: 500px;
+    background-image: url('../../assets/background/wave.png');
+    opacity: 70%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+} */

@@ -1,0 +1,43 @@
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0 , 0 , 0 , 0.4);
+    backdrop-filter: blur(3px);
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+.container{
+    background-color: white;
+    color: black;
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.modal-close{
+    background-color: transparent;
+    outline: none;
+    width: 32px;
+    height: 32px;
+    border: none;
+    right: calc(-100% + 64px);
+    cursor: pointer;
+    display: flex;
+    top: 16px;
+    position: relative;
+    align-items: center;
+}
+
+
+.img-close{
+    width: 70%;
+}

@@ -1,0 +1,249 @@
+.config {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;  }
+
+/*
+    parte inicial
+*/
+/* .headerConfig {
+
+    height: 87px;
+    background: rgb(251, 46, 120);
+    background: linear-gradient(-45deg, rgba(251, 46, 120, 1) 0%,rgba(242, 122, 82, 1) 100%);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+
+/* Header */
+
+.feed_header {
+    width: 100%;
+    height: 60px;
+    background-size: 400% 400%;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #FB2E78 40%, #F27A52 60%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.feed_header_items {
+    padding: 15px;
+}
+
+.feed_logo {
+    object-fit: contain;
+    width: 150px;
+    height: 100px;
+    transition: ease-in-out, all .2s;
+}
+
+.feed_logo:hover {
+    cursor: pointer;
+    transform: scale(0.85);
+}
+
+.feed_logo:active {
+    transform: scale(1);
+}
+
+.imgPerfil {
+    display: none;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    background-color: #ffffff;
+    border-radius: 100%;
+    border: 2px solid #F2C744;
+}
+
+.config_titulo {
+    padding-left: 40px;
+    background-color: #E6E6E6;
+    height: 116px;
+    display: flex;
+    align-items: center;
+    border: #BEBEBE 2px solid;
+}
+.iconConfig{
+    margin-right: 10px;
+}
+
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 22px;
+    font-weight: 800;
+}
+/*
+    meio
+*/
+.config_conteudo {
+    display: grid;
+    grid-template-columns: 2fr 0fr 2fr;
+}
+
+.config_perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1/2;
+}
+.barraCentral {
+    grid-column: 2/3;
+    margin-top: 30px;
+    width: 4px;
+    background-image: linear-gradient(180deg, #FB2E78 40%, #F24E44 60%);
+    border-radius: 100px;
+    height: 100%;
+
+}
+.config_info {
+    grid-column: 3/3;
+}
+.config_perfiltitulo{
+    margin-top: 20px;
+}
+.config_fotoPerfil {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 144px;
+    height: 144px;
+    border-radius: 180px;
+    background-color: gray;
+    border : solid #BEBEBE 2px;
+}
+
+.config_imgProfile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.enviararquivo{
+    border-radius: 17px;
+    margin-bottom: 40px;
+}
+.config_tags{
+    border-radius: 17px;
+    width: 350px;
+    height: 100px;
+    background-color: transparent;
+}
+
+.formConfig{
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.inputText{
+    font-size: 13px;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border: 0;
+    border-bottom: solid 1.8px #BEBEBE;
+    width: 100%;
+    background-color: white;
+    size: 13px;
+}
+.inputText:focus{
+    outline: none;
+    border-color: #FB2E78;
+    
+}
+.config_divInfo{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.btnred{
+    margin-right: 10px;
+    font-size: 15px;
+    color: #A5A5A5;
+    background-color: transparent;
+    padding: 6px;
+    border: #A5A5A5 solid 2px;
+    border-radius: 10px;
+}
+.btnsave{
+    font-size: 15px;
+    color: white;
+    background-color: #BEBEBE;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+}
+.btnred:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    font-weight: 800;
+    border: #FB2E78 2px solid;
+    background: linear-gradient(90deg, #FB2E78 0%, #F27A52 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btnsave:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    font-weight: 800;
+    background: linear-gradient(90deg, #FB2E78 0%, #F27A52 100%);
+}
+
+.hrConfig{
+    width: 30em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px #BEBEBE solid;
+    border-radius: 15px;
+    margin-left:auto; margin-right: auto;
+}
+.senhas{
+    display: flex;
+    justify-content: space-between;
+}
+.divInput{
+    margin-top: 20px;
+}
+.textoLbl{
+    font-weight: bold;
+}
+
+.config_footer{
+    bottom: 0px;
+    width: 100%;
+    margin-top: 100px;
+}

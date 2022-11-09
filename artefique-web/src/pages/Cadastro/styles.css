@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.grid_reg {
+    display: grid;
+    grid-template-columns: 1.3fr 1.5fr;
+    height: 100%;
+    width: 100%;
+}
+
+.full_size {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+}
+
+.login_header {
+    position: absolute;
+    display: flex !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    justify-content: flex-start !important;
+    align-items: center;
+}
+
+.login_header img {
+    width: 10%;
+    margin-left: 30px;
+}
+
+.back {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    border: 0;
+    background-color: transparent;
+    background-image: url('../../assets/buttons/de-volta.png');
+    background-size: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+/* Background */
+
+body {
+    background-color: #f9f9f9;
+    background-size: 100%;
+}
+
+.side_element {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* background-color: aqua; */
+}
+
+.background_img {
+    width: 80%;
+    object-fit: contain;
+}
+
+/* Register */
+
+.form_register {
+    width: 100%;
+    display: contents;
+}
+
+.register_screen {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    /* background-color: red; */
+}
+
+.register_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    height: 700px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+
+}
+
+.title_register {
+    margin-top: 35px;
+    font-size: 25px;
+}
+
+.title_register span {
+    font-weight: 800;
+
+    /* Gradient */
+    background-size: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #FB2E78 40%, #F24E44 60%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.underline_reg {
+    width: 200px;
+    height: 2.5px;
+    border-radius: 20px;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #FB2E78 40%, #F24E44 60%);
+}
+
+.register_inputs {
+    display: flex;
+    margin-top: 30px;
+    height: 60%;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.vl {
+    width: 5px;
+    background-image: linear-gradient(180deg, #FB2E78 40%, #F24E44 60%);
+    border-radius: 100px;
+    height: 70%;
+    margin: auto;
+}
+
+.reg_section_input{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: #000000; */
+}
+/* Input */
+
+.insert_input_reg {
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-bottom: solid 1.5px #000000;
+    padding-right: 10px;
+}
+
+.insert_input_reg:focus {
+    outline: none;
+    border-color: #FB2E78;
+
+}
+
+.reg_inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.usertype{
+    font-size: 15px;
+}
+
+#name {
+    background: url("../../assets/input_icons/nome.png") no-repeat scroll 7px 7px;
+    background-size: 20px;
+    background-position: 5px;
+    padding-left: 30px;
+}
+
+#user{
+    background: url("../../assets/input_icons/user.png") no-repeat scroll 7px 7px;
+    background-size: 20px;
+    background-position: 5px;
+    padding-left: 30px;
+}
+
+#reg_password {
+    background: url("../../assets/input_icons/password.png") no-repeat scroll 7px 7px;
+    background-size: 20px;
+    background-position: 5px;
+    padding-left: 30px;
+}
+
+#date {
+    background: url("../../assets/input_icons/date-of-birth.png") no-repeat scroll 7px 7px;
+    background-size: 20px;
+    background-position: 5px;
+    padding-left: 30px;
+}
+
+/* Checkbox */
+
+.checks {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boxes {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+input[type=radio] {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */ 
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+    
+    font: inherit;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    border: 1px solid currentColor;;
+    margin-right: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 0.60em;
+    height: 0.60em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: #FB2E78;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  input[type="radio"]:focus {
+    /* outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em); */
+  }
+
+  /* Buttons */
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    /* background-color: #000000; */
+}
+
+.create {
+    width: 60%;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, #FB2E78 0%, #F27A52 100%);
+    transition: 0.2s;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+
+    margin-top: 30px;
+}
+
+.create:hover {
+    transition: ease-in-out, transform .25s ease-in-out;
+    transform: scale(90%);
+    cursor: pointer;
+}
+
+.create:active {
+    transition: ease-in-out, transform .05s ease-in-out;
+    transform: scale(100%);
+    background: linear-gradient(90deg, #db2769 0%, #d36b48 100%);
+}
+
+@media only screen and (max-width: 700px) {
+    .background_img{
+        display: none;
+    }
+}

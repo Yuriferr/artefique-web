@@ -1,0 +1,365 @@
+.Home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btnLogin{
+    width: 401px;
+    height: 66px;
+    margin-top: 100px;
+    border: none;
+    background: linear-gradient(90deg, #FB2E78 0%, #F27A52 100%);
+    border-radius: 50px;
+    transition: 0.2s;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.btnLogin:hover{
+    transition: ease-in-out, transform .25s ease-in-out;
+    transform: scale(90%);
+    cursor: pointer;
+}
+
+.linkLogin{
+    text-decoration: none;
+    color: white;
+}
+
+.Home{
+    margin: 0px;
+    display: block;
+}
+
+/* Banner */
+
+.Lp_Banner{
+    display: flex;
+    top: 0px;
+    width: 100%;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+
+/* About us */
+.about_us{
+    background-color: #FFFFFF;
+}
+
+.info_block{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.text_block{
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    text-align: left;
+    padding: 38px;
+    padding-right: 120px;
+    transform: translateX(50px);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.image_block{
+    /* border: #FB2E78 2px solid; */
+    border-radius: 15px;
+    width: 80vw;
+}
+
+.about_img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    z-index: 10;
+    position: absolute;
+    transform: translateX(-40px);
+}
+
+.title_lp{
+    text-transform: uppercase;
+    background-size: 100%;
+    background-color: #000000;
+    font-weight: 500;
+    background-image: linear-gradient(90deg, #FB2E78 40%, #F24E44 60%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    transition: ease-in-out, .25s;
+}
+
+.title_lp:hover{
+    transform: scale(1.05) translateX(20px);
+}
+
+/* Pink */
+
+.pink{
+    background-color: #F2F2F2;
+    height: 200px;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 215px;
+    background-size: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(90deg, #FB2E78 40%, #F27A52 60%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.logo2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo3 {
+    width: 30px;
+    height: 30px;
+}
+
+.img_logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.side_footer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+.privacy {
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 30%;
+}
+
+
+/* Galeria */
+
+.gallery{
+    width: 100%;
+    height: fit-content;
+}
+
+.row_lp{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.item{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    transition: ease-in-out, all .25s;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
+}
+
+.item:hover{
+    cursor: pointer;
+    transform: scale(1.04);
+    box-shadow: 0px 0px 8px 5px rgba(61, 61, 61, 0.2);
+
+}
+
+@media only screen and (max-width: 600px) {
+    .row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 12px;
+        grid-row-gap: 12px;
+        justify-items: center;
+
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .item{
+        width: 150px;
+        height: 150px;
+        background-color: #D9D9D9;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Search */
+
+.search_section{
+    position: absolute;
+    z-index: 9;
+    top: 190px;
+}
+
+/* Searchbar */
+
+.searchbar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 2.5em;
+}
+
+.searchbar_feed:focus{
+    outline: none;
+}
+
+.searchbar_feed {
+    background-color: #ffffff;
+    border: 1px solid #f24d443d;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 10px;
+    height: 30px;
+    width: 500px;
+}
+
+/* Buttons */
+
+.searchbar_button {
+    background-color: #F24E44;
+    border-radius: 0px 10px 10px 0px;
+    color: #ffffff;
+    border: none;
+    height: 32px;
+    width: 100px;
+}
+
+.searchbar_button{
+    cursor: pointer;
+}
+
+.lp_title{
+    text-align: start;
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.pink_title{
+    font-weight: 800;
+    color: #FB2E78;
+}
+
+.orange_title{
+    font-weight: 800;
+    color: #F27A52;
+}
+
+/* Grids */
+.lp_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.lp_ballinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LP_ball{
+    width: 150px;
+    height: 150px;
+    background-color: #FFFFFF;
+    box-shadow: #D9D9D9 4px 4px 4px ;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LP_ballicon{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.lp_balltext{
+    width: 60%;
+    height: 100px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+}
