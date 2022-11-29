@@ -363,3 +363,65 @@ footer {
     text-transform: uppercase;
 
 }
+
+@media only screen and (max-width: 800px) {
+    .feed_logo{
+        height: 200px !important;
+        width: 250px !important;
+    }
+    button{
+        font-size: larger !important;
+    }
+    .text_block{
+        font-size: 20px;
+    }
+    .pink{
+        height: fit-content !important;
+    }
+    .row_lp{
+        grid-column-gap: 5px !important;
+    }
+    .item{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .info_tr{
+        font-size: large;
+    }
+    .pink_info{
+        height: fit-content !important;
+
+    }
+    .lp_balltext{
+        font-size: 22px !important;
+        height: fit-content !important
+    }
+    .feed_header{
+        width: 100% !important;
+        height: 100px !important;
+    }
+    html{
+        width: 100vh !important;
+        height: 100vh !important;
+
+    }
+    .lp_title{
+        width: fit-content !important;
+    }
+    .about_img{
+        width: 100px !important;
+        height: 100px !important;
+
+    }
+    .searchbar_feed{
+        font-size: 24px;
+        width: 400px !important;
+    }
+    .searchbar_button{
+        margin-top: 2px !important;
+        font-size: 24px !important;
+        width: auto !important;
+        padding: 5px !important;
+        height: auto !important;
+    }
+}

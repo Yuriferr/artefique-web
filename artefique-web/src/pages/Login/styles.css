@@ -348,17 +348,8 @@ input[type="checkbox"]:disabled {
 }
 
 
-
-/* Waves */
-/* 
-.wrapper{
-    position: absolute;
-    bottom: 0px;
-    z-index: -10;
-    width: 100%;
-    height: 500px;
-    background-image: url('../../assets/background/wave.png');
-    opacity: 70%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-} */
+@media only screen and (max-width: 700px) {
+    .background_img{
+        display: none;
+    }
+}

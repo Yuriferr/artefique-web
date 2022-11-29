@@ -23,6 +23,11 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 55%;
+    }
+  }
 .modal-close{
     /* background-color: transparent;
     outline: none;

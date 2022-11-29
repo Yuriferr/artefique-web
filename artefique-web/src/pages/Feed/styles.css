@@ -270,3 +270,141 @@ footer {
     text-decoration: none;
     color: #000000;
 }
+
+.swiper-slide{
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+.swiper-slide:hover{
+    cursor: pointer;
+}
+
+.detail_container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detail_image{
+    width: 100%;
+    height: 300px;
+    background-color: transparent;
+    border: 2px transparent solid;
+    border-radius: 25px;
+    object-fit: contain;
+}
+
+.image-cont{
+    text-align: center;
+    width: 80%;
+}
+
+.detail_title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.detail_infos{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.detail_infos{
+    width: 70%;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.detail_desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    padding: 15px;
+    height: 100px;
+    width: 100%;
+    overflow-y: auto;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.detail_name{
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+
+    font-weight: 500;
+    background: linear-gradient(90deg, #FB2E78 0%, #F27A52 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* @media only screen and (max-width: 1500px) {
+
+    .detail_image{
+        height: 150px;
+    }
+
+    .detail_title{
+        font-size: 15px;
+    }
+
+    .detail_desc{
+        font-size: 10px;
+        height: 50px;
+    }
+
+    .detail_name{
+        font-size: 10px;
+    }
+} */
+
+@media only screen and (max-width: 500px) {
+
+    .detail_image{
+        height: 20px;
+    }
+
+    .detail_title{
+        font-size: 5px;
+    }
+
+    .detail_desc{
+        font-size: 2px;
+        height: 5px;
+    }
+
+    .detail_name{
+        font-size: 2px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .login_header{
+        margin-top: 20px;
+    }
+    .login_header img{
+        height: 100% !important;
+        width: 30% !important;
+    }
+    .login_block{
+        margin-left: 20vh !important;
+    }
+    .side_element{
+        display: none !important;
+    }
+}

@@ -9,6 +9,8 @@ import { getAuth, updateProfile, deleteUser } from "firebase/auth";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { db } from '../../database/firebase'
 
+import Modal from "../../components/Modal/Modal";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -44,6 +46,8 @@ function Feed() {
     const auth = getAuth(app);
     const user = auth.currentUser;
 
+    const [modal, setModal] = useState(false);
+    const [id, setId] = useState('')
     const [name, setName] = useState('')
     const [photoURL, setPhotoUrl] = useState('')
     const [imgFeed, setImgFeed] = useState([])
@@ -61,16 +65,51 @@ function Feed() {
 
     LerDados()
 
-    async function LerDados(){
+    async function LerDados() {
         const querySnapshot = await getDocs(collection(db, "posts"));
         querySnapshot.forEach((doc) => {
-          dados.push(doc.data())
+            dados.push({ dados: doc.data(), id: doc.id })
         })
         setImgFeed(dados)
-      }
+    }
+
+
 
     return (
         <div>
+
+            {modal ? (<Modal onClose={() => setModal(false)}>
+                <div>
+                    {imgFeed.map((item) => {
+                        if (item.id == id) {
+                            return (
+                                <div className="detail_container">
+                                    <div className='image-cont'>
+                                        <img className='detail_image' src={item.dados.Url} />
+                                        <div className='detail_title'>
+                                            <p>{item.dados.Nome}</p>
+                                        </div>
+                                    </div>
+                                    <div className='line_modal' />
+                                    <br />
+                                    <section className='detail_infos'>
+                                        <div className='detail_desc'>
+                                            <p>{item.dados.Desc}</p>
+                                        </div>
+                                        <div className='detail_name'>
+                                            <p>Artista:</p>
+                                            <p>{item.dados.User}</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            )
+                        }
+                    })}
+                </div>
+            </Modal>
+            ) : null}
+
+
             <div className="Feed">
                 <header className='feed_header'>
                     <div className='feed_header_items'>
@@ -80,7 +119,7 @@ function Feed() {
                         </Link>
                     </div>
                     <div className='feed_header_items'>
-                        <Link to={`/perfil/${name}`}><img id="imgPerfil" className="imgPerfil" src={photoURL}/></Link>
+                        <Link to={`/perfil/${name}`}><img id="imgPerfil" className="imgPerfil" src={photoURL} /></Link>
                         <button id="join" className='feed_join'><Link className='linkLogin' to='/cadastro'>Join</Link></button>
                         <button id="login" className='feed_login'><Link className='feed_linkLogin' to='/login'>Login</Link></button>
                     </div>
@@ -104,13 +143,19 @@ function Feed() {
                                     }}
                                     modules={[Pagination]}
                                     className="mySwiper"
+
+
                                 >
                                     {imgFeed.map(item => {
-                                        return(
-                                            <SwiperSlide key={item.Url}>
-                                                <img src={item.Url}/>
+
+                                        return (
+                                            <SwiperSlide key={item.dados.created} onClick={() => {
+                                                setModal(true)
+                                                setId(item.id)
+                                            }}>
+                                                <img src={item.dados.Url} />
                                                 <div className='artist_feed'>
-                                                    {item.Nome}
+                                                    {item.dados.Nome}
                                                 </div>
                                             </SwiperSlide>
                                         )
@@ -121,48 +166,50 @@ function Feed() {
                         <div className='rows'>
                             <h3 className='feedcategory_name'>Sprite Sheets</h3>
                             <Swiper
-                                    slidesPerView={3}
-                                    spaceBetween={30}
-                                    pagination={{
-                                        clickable: true,
-                                    }}
-                                    modules={[Pagination]}
-                                    className="mySwiper"
-                                >
-                                    {imgFeed.map(item => {
-                                        return(
-                                            <SwiperSlide key={item.Url}>
-                                                <img src={item.Url}/>
-                                                <div className='artist_feed'>
-                                                    {item.Nome}
-                                                </div>
-                                            </SwiperSlide>
-                                        )
-                                    })}
-                                </Swiper>
+                                slidesPerView={3}
+                                spaceBetween={30}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                modules={[Pagination]}
+                                className="mySwiper"
+                            >
+                                {imgFeed.map(item => {
+
+                                    return (
+                                        <SwiperSlide key={item.dados.created} onClick={() => setModal(true)}>
+                                            <img src={item.dados.Url} />
+                                            <div className='artist_feed'>
+                                                {item.dados.Nome}
+                                            </div>
+                                        </SwiperSlide>
+                                    )
+                                })}
+                            </Swiper>
                         </div>
                         <div className='rows'>
                             <h3 className='feedcategory_name'>Objetos</h3>
                             <Swiper
-                                    slidesPerView={3}
-                                    spaceBetween={30}
-                                    pagination={{
-                                        clickable: true,
-                                    }}
-                                    modules={[Pagination]}
-                                    className="mySwiper"
-                                >
-                                    {imgFeed.map(item => {
-                                        return(
-                                            <SwiperSlide key={item.Url}>
-                                                <img src={item.Url}/>
-                                                <div className='artist_feed'>
-                                                    {item.Nome}
-                                                </div>
-                                            </SwiperSlide>
-                                        )
-                                    })}
-                                </Swiper>
+                                slidesPerView={3}
+                                spaceBetween={30}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                modules={[Pagination]}
+                                className="mySwiper"
+                            >
+                                {imgFeed.map(item => {
+
+                                    return (
+                                        <SwiperSlide key={item.dados.created} onClick={() => setModal(true)}>
+                                            <img src={item.dados.Url} />
+                                            <div className='artist_feed'>
+                                                {item.dados.Nome}
+                                            </div>
+                                        </SwiperSlide>
+                                    )
+                                })}
+                            </Swiper>
                         </div>
                     </div>
                 </section>
